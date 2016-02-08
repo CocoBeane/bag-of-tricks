@@ -1,0 +1,66 @@
+body {
+	width: 210px;
+}
+
+a:link {
+	color: white;
+	display: block;
+	text-decoration: none;
+}
+
+.button {
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: #96BA5A;
+	font-family: 'Helvetica Neue';
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin: 5px;
+	padding: 5px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+	width: 160px;
+}
+
+.button:focus {
+	outline-style: none
+}
+
+.button:hover {
+	background-color: #76A045;
+}
+
+.button:active {
+	background-color: #6c923f;
+}
+
+.button[disabled="disabled"] {
+	background-color: #bbbbbb;
+	color: #666666;
+}
+
+.categories {
+	border-top: 1px solid #A0A0A0;;
+	border-right: 1px solid #A0A0A0;
+	border-bottom: 1px solid #505759;
+	border-left: 1px solid #505759;
+	border-radius: 2px;
+	padding: 2px;
+	padding-top: 15px;
+	z-index: 1;
+}
+
+h3 {
+	background-color: white;
+	color: #494949;
+	display: inline-block;
+	padding: 5px;
+	position: absolute;
+  	top: -17px;
+  	left: 17px;
+  	z-index: 2;
+}
+
+.section {
+	position: relative;
+	padding: 10px;
+}

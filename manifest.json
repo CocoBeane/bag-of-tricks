@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+
+  "name": "Redemption Team Bag of Tricks",
+  "description": "A collection of tricks and tweaks for Groupon tools to make life easier for the Redemption Team.",
+  "version": "1.2.2",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "bag_of_tricks.html"
+  },
+
+  "content_scripts": [
+    {
+     "matches":[
+      "https://dealestate.groupondev.com/deals/*", 
+      "https://na8.salesforce.com/*", 
+      "https://toolbox.groupondev.com/tools/generate_redemption_codes"],
+     
+     "js":[
+     "tricks.js",
+     "bag_of_tricks.js"
+     ]
+    }
+  ],
+  
+  "icons": { 
+    "16": "icon.png", 
+    "48": "icon_sparkle.png", 
+    "128": "icon.png" },
+
+  "permissions": [
+    "tabs",
+    "https://dealestate.groupondev.com/deals/*", 
+    "https://na8.salesforce.com/*", 
+    "https://toolbox.groupondev.com/tools/generate_redemption_codes"
+  ]
+}
