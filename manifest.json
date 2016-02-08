@@ -15,7 +15,8 @@
      "matches":[
       "https://dealestate.groupondev.com/deals/*", 
       "https://na8.salesforce.com/*", 
-      "https://toolbox.groupondev.com/tools/generate_redemption_codes"],
+      "https://toolbox.groupondev.com/tools/generate_redemption_codes",
+      "https://command-center.groupondev.com/tools/generate_redemption_codes"],
      
      "js":[
      "tricks.js",
@@ -33,6 +34,7 @@
     "tabs",
     "https://dealestate.groupondev.com/deals/*", 
     "https://na8.salesforce.com/*", 
-    "https://toolbox.groupondev.com/tools/generate_redemption_codes"
+    "https://toolbox.groupondev.com/tools/generate_redemption_codes",
+    "https://command-center.groupondev.com/tools/generate_redemption_codes"
   ]
 }
