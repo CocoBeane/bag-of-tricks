@@ -168,8 +168,17 @@
 			});
 		}
 		
-		$(".code_count").each(function(){
-			$(this).val(40);
+		if ($("#generate_redemption_codes_filename1_count").val() == "1"){
+			$(".code_count").each(function(){
+				$(this).val(50);
+			});
+		}
+		
+		$("#generate_redemption_codes_filename1_count").keyup(function(){
+			var amount = $("#generate_redemption_codes_filename1_count").val();
+			$(".code_count").each(function(){
+				$(this).val(amount);
+			});
 		});
 
 		$("#generate_redemption_codes_filename1_prefix").keyup(function(){
