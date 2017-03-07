@@ -1,9 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "Redemption Team Bag of Tricks",
   "description": "A collection of tricks and tweaks for Groupon tools to make life easier for the Redemption Team.",
-  "version": "1.4",
+  "version": "1.5",
 
   "browser_action": {
     "default_icon": "icon.png",

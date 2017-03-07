@@ -2,8 +2,8 @@
 
 //DE FUNCTIONS
 
-	//Attach most recent buckets to all active options
-	attachBuckets = function() {
+	//Attach most recent buckets to all active options ***DEPRECATED**
+	/* attachBuckets = function() {
 
 		if (!$("#deal_use_merchant_specific_voucher_codes").is(":checked")){
 			$("#deal_use_merchant_specific_voucher_codes").attr("checked","checked");
@@ -38,9 +38,9 @@
 		setBuckets(function(){
 			alertReminder();
 		});
-	}
+	} 
 
-	//Attach only the top bucket to all options
+	//Attach only the top bucket to all options ***DEPRECATED**
 	attachTopBucket = function() {
 
 		if (!$("#deal_use_merchant_specific_voucher_codes").is(":checked")){
@@ -63,7 +63,7 @@
 		});
 	}	
 
-	//Find this bucket in the PWA
+	//Find this bucket in the PWA ***DEPRECATED**
 	findBucket = function() {
 		var number_of_options = 0;
 
@@ -80,9 +80,9 @@
 			}
 			number_of_options++
 		});
-	}
+	} */
 
-	//Option all active options
+	//Open all active options
 	openActiveOptions = function() {
 		var number_of_options = 0;
 
@@ -122,7 +122,7 @@
 				tickets.push(ticketNumber);
 			}
 
-			var zendeskTicketURL = "https://merchantsupport.groupon.com/tickets/";
+			var zendeskTicketURL = "https://grouhelpon.zendesk.com/agent/tickets/";
 
 				for (var i=0; i < tickets.length; i++) {
 					var link = zendeskTicketURL+tickets[i];
@@ -138,9 +138,12 @@
 	searchForTickets = function() {
 		var current_url = window.location.href;
 		var current_sfid = current_url.split("/")[3];
-		var zendesk_search_url = "https://merchantsupport.groupon.com/search?utf8=✓&query="+current_sfid;
+  		var prompt = window.prompt("Here's the SFID. Copy it to your clipboard.\n Then, a Zendesk window will open for you to paste it into.", current_sfid);
 
-		window.open(zendesk_search_url, '_blank');
+  		if (prompt) {
+			var zendesk_search_url = "https://grouhelpon.zendesk.com/agent/search?query=";
+			window.open(zendesk_search_url, '_blank');
+		}
 	}
 
 	//ETC
@@ -196,3 +199,6 @@
 
 		$("#generate_redemption_codes_filename10_count").keyup();
 	}
+
+
+
