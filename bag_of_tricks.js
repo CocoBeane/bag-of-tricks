@@ -8,10 +8,7 @@ injectjQuery = function() {
       {file:"jquery-2.1.3.min.js"});
 }
 
-/*Here are all of the execution functions.
-I need to re-factor these into one
-master function that will choose the correct
-tricks.js function based on the button clicked.*/
+/*Here are all of the execution functions. */
 
 //DE tweaks
 executeWidenOptions = function() {
@@ -30,24 +27,6 @@ executeOpenActiveOptions = function() {
 	injectjQuery();
  	chrome.tabs.executeScript(
  		{code:"openActiveOptions();"});	
-}
-
-executeAttachBuckets = function() {
-	injectjQuery();
-	chrome.tabs.executeScript(
-		{code:"attachBuckets();"});
-}
-
-executeFindBucket = function() {
-	injectjQuery();
-	chrome.tabs.executeScript(
-		{code:"findBucket();"});
-}
-
-executeAttachTopBucket = function() {
-	injectjQuery();
-	chrome.tabs.executeScript(
-		{code:"attachTopBucket();"});	
 }
 
 //Navigation
@@ -72,9 +51,6 @@ executeGenerateTBJFiles = function() {
 
 document.addEventListener('DOMContentLoaded', function () {
 	//DE tweaks
-	document.getElementById("attach-buckets").addEventListener('click', executeAttachBuckets);
-	document.getElementById("attach-top-bucket").addEventListener('click', executeAttachTopBucket);
-	document.getElementById("find-buckets").addEventListener('click', executeFindBucket);
 	document.getElementById("open-active").addEventListener('click', executeOpenActiveOptions);
 	document.getElementById("open-all").addEventListener('click', executeOpenOptions);
 	document.getElementById("widen-options").addEventListener('click', executeWidenOptions);
@@ -84,3 +60,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	//Etc.
 	document.getElementById("tbj").addEventListener('click', executeGenerateTBJFiles);
 });
+
