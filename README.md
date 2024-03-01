@@ -1,0 +1,2 @@
+# Codes Team Bag of Tricks
+This is a Chrome extension I wrote in 2013 while I was simultaneously teaching myself Javascript. The extension was used by a large team of employees at my former company for many years. It contains a collection of small JQuery functions that were used to automate the extremely manual, outdated processes our team was required to use on a daily basis. The extension is currently archived, and the code was deprecated around 2016 or 2017, but I'm leaving it up here for reference and posterity.
